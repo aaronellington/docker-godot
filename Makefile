@@ -1,6 +1,6 @@
 test:
-	bash build.bash 4.3-stable
-	docker run --rm -it  ghcr.io/lunagic/godot:4.3-stable
+	bash build.bash 4.5.1-stable
+	docker run --rm -it  ghcr.io/aaronellington/godot:4.5.1-stable
 
 publish:
 	bash publish.bash

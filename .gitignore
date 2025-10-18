@@ -1,0 +1,9 @@
+# System
+.DS_Store
+
+# Temporary Files
+/.config/tmp/
+
+# Secrets
+.env.local
+.env.*.local

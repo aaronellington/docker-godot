@@ -8,5 +8,5 @@ docker build --pull --rm \
 	--file "Dockerfile" \
 	--platform linux/amd64,linux/arm64 \
 	--build-arg GODOT_VERSION=${GODOT_VERSION} \
-	--tag ghcr.io/lunagic/godot:${GODOT_VERSION} \
+	--tag ghcr.io/aaronellington/godot:${GODOT_VERSION} \
 	"."
