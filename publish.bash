@@ -7,6 +7,6 @@ GODOT_VERSIONS=(
 )
 
 for GODOT_VERSION in "${GODOT_VERSIONS[@]}" ; do
-	# bash $basedir/build.bash $GODOT_VERSION
+	bash $basedir/build.bash $GODOT_VERSION
 	docker push ghcr.io/aaronellington/godot:${GODOT_VERSION}
 done
