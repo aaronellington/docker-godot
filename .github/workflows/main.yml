@@ -3,6 +3,8 @@ name: Main
   push:
     branches:
       - main
+env:
+  GODOT_VERSION: 4.5.1-stable
 jobs:
   publish:
     if: github.ref == 'refs/heads/main'
@@ -15,4 +17,11 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           username: ${{ github.actor }}
-      - run: bash publish.bash
+      - uses: docker/build-push-action@v5
+        with:
+          context: .
+          platforms: linux/amd64,linux/arm64
+          build-args: |
+            GODOT_VERSION=${{ env.GODOT_VERSION }}
+          push: true
+          tags: ghcr.io/aaronellington/godot:${{ env.GODOT_VERSION }}
