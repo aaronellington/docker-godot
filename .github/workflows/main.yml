@@ -15,4 +15,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ghcr.io
           username: ${{ github.actor }}
-      - run: ./publish.bash
+      - run: bash publish.bash
